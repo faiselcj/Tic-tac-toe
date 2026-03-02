@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      gcc: 11
+
+  build:
+    commands:
+      - echo "Compiling Tic Tac Toe application..."
+      - g++ -std=c++17 main.cpp -o tic_tac_toe
+
+  post_build:
+    commands:
+      - echo "Build completed successfully"
+
+artifacts:
+  files:
+    - tic_tac_toe
